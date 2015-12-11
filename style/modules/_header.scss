@@ -1,0 +1,97 @@
+.menu-toggle .site-header .site-header-nav{
+    right:0;
+}
+
+.site-header{
+    color:$color-yellow;
+    background-color:transparent;
+    transition: background-color 200ms;
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    z-index: 100;
+    height:60px;
+    overflow: visible;
+    
+    &.bg{
+        background:$color-red;
+    }
+    
+    .inner{
+        padding:$base-margin*2 $base-margin;
+        @media only screen and(min-width:640px){
+            padding: $base-margin*2;
+        }
+        
+    }
+    
+    .site-title{
+        font-size:24px;
+        top:-2px;
+        position: relative;
+    }
+    
+    .language-switcher{
+        float: right;
+        padding-left:$base-margin*2;
+        font-size:18px;
+        
+        a:first-child{
+            border-right:1px solid $color-yellow;
+            padding-right:5px;
+        }
+    }
+    
+    .site-header-nav{
+        
+        @media only screen and(max-width:640px){
+            
+            position: fixed;
+            top:0;
+            right:-220px;
+            transition: right 250ms;
+            transition-timing-function: cubic-bezier(.72, .09, .52, 1.06);
+            height:100vh;
+            width:220px;
+            background-color: $color-black;
+            
+            a{
+                display: block;
+                padding:20px;
+            }
+        
+        }
+        
+        float:right;
+        font-size:18px;
+        
+        >a{
+            padding-left:$base-margin;
+            @media only screen and(min-width:640px){
+                padding-left:$base-margin*2;
+            }
+        }
+        
+    }
+    
+    .hamburger{
+        float:right;
+        height: 60px;
+        width: 70px;
+        top: -20px;
+        position: relative;
+        right: -20px;
+        
+        svg{
+            @include center(true,true);
+            fill: $color-yellow;
+        }
+        
+        @media only screen and(min-width:640px){
+            display: none;
+        }
+        
+    }
+    
+}

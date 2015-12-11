@@ -9,42 +9,30 @@ $base-font-weight-3: 700;
 $text-margin:.7em;
 
 $base-font-size: 15px;
-$base-font-size-480: 15px;
+$base-font-size-480: 16px;
 $base-font-size-640: 16px;
-$base-font-size-960: 16px;
+$base-font-size-960: 17px;
+$base-font-size-1280: 18px;
 $base-line-height:1.5;
 
 
 // Højde bredde basic
-$base-margin:20px;
-$page-width-max:1080px;
-$read-width-max:680px;
-$read-width-max-small:640px;
+$base-margin:10px;
+$read-width-max:640px;
+$read-width-min:420px;
 
 
 
 // Farver
 $color-black: #333333;
-$color-black-2: #000000;
-$color-black-3: #454545;
+$color-white: #FFFFFF;
+$color-red: #FF2800;
+$color-yellow: #fcfcf4;
+$color-yellow-2: #eceee4;
+$color-facebook: #3b5998;
 
-$color-light: #fcfcfc;
-$color-light-2: #f2f3f4;
-$color-light-3: #e5e5e5;
-$color-white: #ffffff;
-
-$accent-color-red: #ea492e;
-$accent-color-yellow: #c5cb35;
-$accent-color-green: #58b47b;
-$accent-color-blue: #3E86B3;
-
-
-// Anchors
-
-$anchor-hover-color:$accent-color-blue;
-$anchor-current-color:$anchor-hover-color;
 
 
 // Skygge
-
+$strip-shadow: 1px 1px 2px rgba($color-black,.2);
 $base-shadow: 1px 1px 2px 0px rgba($color-black,.2) ;

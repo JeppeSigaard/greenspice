@@ -26,6 +26,7 @@
     @media only screen and(min-width:480px){font-size:$base-font-size-480;}
     @media only screen and(min-width:640px){font-size:$base-font-size-640;}
     @media only screen and(min-width:960px){font-size:$base-font-size-960;}
+    @media only screen and(min-width:1280px){font-size:$base-font-size-1280;}
 }
 
 
@@ -35,4 +36,29 @@
 
 %safari-fix{
     @include safari-fix();
+}
+
+.load %midline-after{
+    &:after{
+        height:100%;
+    }
+}
+
+%midline-after{
+    
+    &:after{
+        display: block;
+        content:'';
+        position: absolute;
+        top:0;
+        height:0;
+        transition:height 900ms;
+        transition-delay: 1800ms;
+        width:10px;
+        background:$color-yellow;
+        width:10px;
+        @include center(true,false);
+        box-shadow:$strip-shadow;
+    }
+    
 }

@@ -1,9 +1,14 @@
 <header class="site-header">
-
-  <div class="inner">
-
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
-
-  </div>
-
+    <div class="inner">
+        <a class="site-title" href="{{ site.baseurl }}">{{ site.title }}</a>
+        <a class="hamburger" href="#">{% include svg/menu.svg %}</a>
+        <div class="language-switcher">
+            <a href="{{ site.baseurl }}" class="lang-da">DA</a>
+            <a href="{{ site.baseurl }}/en" class="lang-en">EN</a>    
+        </div>
+        <nav class="site-header-nav">
+            {{page.forhandler_1}}
+            {{page.forhandler_2}}
+        </nav>
+    </div>
 </header>

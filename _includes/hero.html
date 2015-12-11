@@ -1,5 +1,14 @@
 <div class="hero">
-    <div class="inner">
-        
+    <div class="inner read-width padding">
+        <div class="hanger" data-bg="{{ "/assets/img/peppercorn.jpg" | prepend: site.baseurl }}">
+            {% include svg/hanger.svg %}
+        </div>
+        <div class="logo">
+            {% include svg/gourmetpepper.svg %}
+            <h1 class="site-title">Gourmet Pepper</h1>
+            <span class="site-tagline">{% if page.tagline %}{{ page.tagline }}{% else %}{{ site.tagline }}{% endif %}</span>
+        </div>
+        <div class="packet-hole" data-bg="{{ "/assets/img/peppercorn.jpg" | prepend: site.baseurl }}">
+        </div>
     </div>
 </div>
