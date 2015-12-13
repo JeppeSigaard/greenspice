@@ -151,6 +151,18 @@ section {
             transition: height 250ms;
     position: relative;
     display: inline-block; }
+    section .split:not(.section-image) {
+      height: auto; }
+      @media only screen and (min-width: 960px) {
+        section .split:not(.section-image) {
+          width: 50%;
+          height: 440px; } }
+      @media only screen and (min-width: 1280px) {
+        section .split:not(.section-image) {
+          height: 512px; } }
+      @media only screen and (min-width: 1600px) {
+        section .split:not(.section-image) {
+          height: 600px; } }
     @media only screen and (min-width: 960px) {
       section .split {
         width: 50%;
@@ -167,24 +179,24 @@ section {
     background-repeat: no-repeat;
     background-color: #333333; }
   section .text-inner {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-    width: 100%;
-    padding: 10px;
-    margin-top: -20px; }
+    padding: 70px 10px 90px;
+    width: 100%; }
     section .text-inner p, section .text-inner ul {
       max-width: 320px;
       margin: auto; }
     @media only screen and (min-width: 960px) {
       section .text-inner {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d;
         width: 320px;
-        margin-top: 0px; } }
+        margin-top: 0px;
+        padding: 10px; } }
     @media only screen and (min-width: 1080px) {
       section .text-inner {
         width: 420px; } }
@@ -200,6 +212,7 @@ section {
   position: relative;
   height: 100px; }
   .relative-icon .section-icon {
+    top: 0;
     border: 1px solid #dfdfdf;
     box-shadow: none; }
     .relative-icon .section-icon:after {
@@ -219,6 +232,7 @@ section {
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   height: 90px;
+  top: 350px;
   width: 90px;
   border-radius: 90px;
   background-color: #fcfcf4;
@@ -234,21 +248,27 @@ section {
             transform: translate(-50%, -50%) scale(0);
     -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d; }
+  .section-icon.special {
+    top: 270px; }
   @media only screen and (min-width: 960px) {
-    .section-icon:after {
-      position: absolute;
-      width: 10px;
-      position: absolute;
-      left: 50%;
-      -webkit-transform: translate(-50%, 0);
-          -ms-transform: translate(-50%, 0);
-              transform: translate(-50%, 0);
-      -webkit-transform-style: preserve-3d;
-              transform-style: preserve-3d;
-      height: 50px;
-      bottom: -25px;
-      background-color: #fcfcf4;
-      content: ''; } }
+    .section-icon {
+      top: 50%; }
+      .section-icon.special {
+        top: 50%; }
+      .section-icon:after {
+        position: absolute;
+        width: 10px;
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translate(-50%, 0);
+            -ms-transform: translate(-50%, 0);
+                transform: translate(-50%, 0);
+        -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+        height: 50px;
+        bottom: -25px;
+        background-color: #fcfcf4;
+        content: ''; } }
   .section-icon svg {
     fill: #FF2800;
     width: 40px;
@@ -335,7 +355,7 @@ section {
     margin: auto;
     top: 0;
     left: 0;
-    margin-top: 40px;
+    padding: 10px;
     max-width: 540px; }
     @media only screen and (min-width: 960px) {
       .section-big-text .text-inner {
@@ -368,7 +388,8 @@ section {
 
 .site-header {
   color: #fcfcf4;
-  background-color: transparent;
+  height: 50px;
+  background-color: #FF2800;
   -webkit-transition: background-color 200ms;
           transition: background-color 200ms;
   position: fixed;
@@ -376,23 +397,36 @@ section {
   right: 0;
   left: 0;
   z-index: 100;
-  height: 60px;
   overflow: visible; }
+  @media only screen and (min-width: 640px) {
+    .site-header {
+      background-color: transparent;
+      height: 60px; } }
   .site-header.bg {
-    background: #FF2800; }
+    background-color: #FF2800; }
   .site-header .inner {
     padding: 20px 10px; }
     @media only screen and (min-width: 640px) {
       .site-header .inner {
         padding: 20px; } }
   .site-header .site-title {
-    font-size: 24px;
-    top: -2px;
-    position: relative; }
+    position: relative;
+    font-size: 20px;
+    top: -5px; }
+    @media only screen and (min-width: 640px) {
+      .site-header .site-title {
+        font-size: 24px;
+        top: -2px; } }
   .site-header .language-switcher {
     float: right;
+    position: relative;
+    top: -3px;
     padding-left: 20px;
-    font-size: 18px; }
+    font-size: 15px; }
+    @media only screen and (min-width: 640px) {
+      .site-header .language-switcher {
+        font-size: 18px;
+        top: 0; } }
     .site-header .language-switcher a:first-child {
       border-right: 1px solid #fcfcf4;
       padding-right: 5px; }
@@ -421,11 +455,11 @@ section {
           padding-left: 20px; } }
   .site-header .hamburger {
     float: right;
-    height: 60px;
-    width: 70px;
+    height: 50px;
+    width: 60px;
     top: -20px;
     position: relative;
-    right: -20px; }
+    right: -10px; }
     .site-header .hamburger svg {
       position: absolute;
       left: 50%;
@@ -456,7 +490,7 @@ section {
 .hero {
   position: relative;
   background-color: #FF2800;
-  height: 550px;
+  height: 440px;
   color: #eceee4; }
   @media only screen and (min-width: 480px) {
     .hero {
@@ -498,12 +532,13 @@ section {
     height: 140px; }
   .hero .logo {
     position: relative;
-    padding-top: 120px;
+    padding-top: 90px;
     max-width: 300px;
     margin: auto; }
     @media only screen and (min-width: 480px) {
       .hero .logo {
-        max-width: 400px; } }
+        max-width: 400px;
+        padding-top: 120px; } }
     @media only screen and (min-width: 640px) {
       .hero .logo {
         max-width: 620px;
@@ -517,15 +552,17 @@ section {
   .hero .logo svg {
     fill: #fcfcf4;
     position: absolute;
-    left: -10px;
     right: 0;
     height: auto; }
+    @media only screen and (min-width: 480px) {
+      .hero .logo svg {
+        left: -10px; } }
   .hero .site-title {
     font-size: 0; }
   .hero .site-tagline {
     display: block;
     margin-top: 50px;
-    font-size: 18px;
+    font-size: 16px;
     text-align: center; }
     @media only screen and (min-width: 480px) {
       .hero .site-tagline {
@@ -536,11 +573,11 @@ section {
         font-size: 32px;
         margin-top: 100px; } }
   .hero .packet-hole {
-    width: 250px;
-    height: 250px;
-    border-radius: 250px;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
     background-color: #333333;
-    background-size: auto 250px;
+    background-size: auto 200px;
     background-position: center;
     background-repeat: no-repeat;
     margin: auto;
@@ -562,6 +599,12 @@ section {
     -webkit-transition-delay: 800ms;
             transition-delay: 800ms;
     box-shadow: none; }
+    @media only screen and (min-width: 480px) {
+      .hero .packet-hole {
+        width: 250px;
+        height: 250px;
+        border-radius: 250px;
+        background-size: auto 250px; } }
     @media only screen and (min-width: 768px) {
       .hero .packet-hole {
         width: 300px;

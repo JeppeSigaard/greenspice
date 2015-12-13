@@ -4,18 +4,24 @@
 
 .site-header{
     color:$color-yellow;
-    background-color:transparent;
+    height:50px;
+    background-color:$color-red;
+    @media only screen and(min-width:640px){
+        
+        background-color:transparent;
+        height:60px;
+    }
+    
     transition: background-color 200ms;
     position:fixed;
     top:0;
     right:0;
     left:0;
     z-index: 100;
-    height:60px;
     overflow: visible;
     
     &.bg{
-        background:$color-red;
+        background-color:$color-red;
     }
     
     .inner{
@@ -27,15 +33,27 @@
     }
     
     .site-title{
-        font-size:24px;
-        top:-2px;
         position: relative;
+        font-size:20px;
+        top:-5px;
+        @media only screen and(min-width:640px){
+            font-size:24px;
+            top:-2px;
+        }
     }
     
     .language-switcher{
         float: right;
+        position: relative;
+        top:-3px;
         padding-left:$base-margin*2;
-        font-size:18px;
+        font-size:15px;
+        
+        @media only screen and(min-width:640px){
+            
+            font-size:18px;
+            top:0;
+        }
         
         a:first-child{
             border-right:1px solid $color-yellow;
@@ -77,11 +95,11 @@
     
     .hamburger{
         float:right;
-        height: 60px;
-        width: 70px;
+        height: 50px;
+        width: 60px;
         top: -20px;
         position: relative;
-        right: -20px;
+        right: -10px;
         
         svg{
             @include center(true,true);
